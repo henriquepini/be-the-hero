@@ -51,8 +51,8 @@ module.exports = {
       .where('id', id) // Encontra o registro do caso
       .select('ong_id') // Verifica se pertence a ong, selecionando-a
       .first(); // Retorna o único e primeiro registro
-
-      if (incident.ong_id != ong_id){
+// Criando essa validação de null, pois se após conectar ao banco não encontrar nada, ele não seleciona'ong_id', e dá erro
+      if (incident == null || incident.ong_id !== ong_id){
         return res.status(401).json({ error: 'Operation not permitted.' }); // STATUS DE NÃO AUTORIZADO
       }
 

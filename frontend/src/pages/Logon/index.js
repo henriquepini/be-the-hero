@@ -17,7 +17,7 @@ export default function Logon() {
     e.preventDefault();
 
     try {
-      const response = await api.post('sessions', { id });
+      const response = await api.post('sessions', { id }); // Manda o ID no formulário, se der certo continua
 
       localStorage.setItem('ongId', id);
       localStorage.setItem('ongName', response.data.name);

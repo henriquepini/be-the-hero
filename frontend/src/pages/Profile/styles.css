@@ -60,6 +60,7 @@
 }
 
 .profile-container ul li button {
+  background: #FFF;
   position: absolute;
   right: 25px;
   top: 25px;
