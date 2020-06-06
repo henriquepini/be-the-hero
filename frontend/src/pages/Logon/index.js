@@ -24,7 +24,7 @@ export default function Logon() {
 
       history.push('/profile');
     } catch (err) {
-      alert("Falha no login, tente novamente");
+      alert("Nenhuma ONG encontrada com este ID");
     }
   }
 
@@ -34,7 +34,7 @@ export default function Logon() {
         <img src={logoImg} alt="Be The Hero"/>
 
         <form onSubmit={handleLogin}>
-          <h1>Faça seu Logon</h1>
+          <h1>Faça seu Login</h1>
 
           <input 
             placeholder="Sua ID"
